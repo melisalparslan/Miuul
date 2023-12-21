@@ -1,0 +1,58 @@
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however crucial for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Creating conda environment env/env.yaml...
+Downloading and installing remote packages.
+Environment for /Users/melisanuralparslan/PycharmProjects/Miuul/env/env.yaml created (location: .snakemake/conda/a59193c79cc8ed6a25f968a763986cc9_)
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+tRNAscan              1
+tRNAscan_stats        1
+total                 3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 21 15:38:29 2023]
+localrule tRNAscan_stats:
+    input: resource/G_intestinalis.fasta
+    output: output/G_intestinalis.tRNA, output/G_intestinalis.stats
+    jobid: 2
+    reason: Missing output files: output/G_intestinalis.tRNA
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+Activating conda environment: .snakemake/conda/a59193c79cc8ed6a25f968a763986cc9_
+[Thu Dec 21 15:38:59 2023]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Dec 21 15:38:59 2023]
+localrule tRNAscan:
+    input: resource/G_intestinalis.fasta
+    output: output/tRNA_scan_result.txt
+    jobid: 1
+    reason: Missing output files: output/tRNA_scan_result.txt
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+bash run_tRNAscan.sh resource/G_intestinalis.fasta output/tRNA_scan_result.txt
+[Thu Dec 21 15:38:59 2023]
+Error in rule tRNAscan:
+    jobid: 1
+    input: resource/G_intestinalis.fasta
+    output: output/tRNA_scan_result.txt
+    shell:
+        bash run_tRNAscan.sh resource/G_intestinalis.fasta output/tRNA_scan_result.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-21T153821.832155.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
