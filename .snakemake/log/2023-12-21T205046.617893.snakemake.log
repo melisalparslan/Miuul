@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+all             1
+tRNAscan        1
+total           2
+
+Select jobs to execute...
+
+[Thu Dec 21 20:50:46 2023]
+rule tRNAscan:
+    input: resource/G_intestinalis.fasta
+    output: output/tRNA_scan_result.txt
+    jobid: 1
+    reason: Missing output files: output/tRNA_scan_result.txt
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+bash run_tRNAscan.sh resource/G_intestinalis.fasta output/tRNA_scan_result.txt
+[Thu Dec 21 20:50:47 2023]
+Error in rule tRNAscan:
+    jobid: 1
+    input: resource/G_intestinalis.fasta
+    output: output/tRNA_scan_result.txt
+    shell:
+        bash run_tRNAscan.sh resource/G_intestinalis.fasta output/tRNA_scan_result.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-21T205046.617893.snakemake.log

@@ -1,6 +1,6 @@
 
 tRNAscan-SE v.2.0.12 (Nov 2022) scan results (on host Melisa-MacBook-Air.local)
-Started: Thu Dec 21 15:57:53 +03 2023
+Started: Thu Dec 21 21:42:47 +03 2023
 
 ------------------------------------------------------------
 Sequence file(s) to search:        resource/G_intestinalis.fasta
@@ -29,7 +29,7 @@ Script CPU time:        0.19 s
 Scan CPU time:          23.58 s
 Scan speed:             992.0 Kbp/sec
 
-First pass search(es) ended: Thu Dec 21 15:58:02 +03 2023
+First pass search(es) ended: Thu Dec 21 21:42:56 +03 2023
 
 Infernal Stats:
 -----------
@@ -38,12 +38,12 @@ Infernal-confirmed tRNAs:     75
 Bases scanned by Infernal:  7793
 % seq scanned by Infernal:  0.0 %
 Script CPU time:          0.15 s
-Infernal CPU time:            8.98 s
-Scan speed:               867.8 bp/sec
+Infernal CPU time:            9.11 s
+Scan speed:               855.4 bp/sec
 
-Infernal analysis of tRNAs ended: Thu Dec 21 15:58:10 +03 2023
+Infernal analysis of tRNAs ended: Thu Dec 21 21:43:04 +03 2023
 
-Overall scan speed: 711010.0 bp/sec
+Overall scan speed: 708211.6 bp/sec
 
 tRNAs decoding Standard 20 AA:              62
 Selenocysteine tRNAs (TCA):                 0
