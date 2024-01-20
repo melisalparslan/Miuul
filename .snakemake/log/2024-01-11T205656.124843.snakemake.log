@@ -1,0 +1,58 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+tRNAscan_stats_wildcard        2
+total                          3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jan 11 20:56:57 2024]
+localrule tRNAscan_stats_wildcard:
+    input: resource/Genome/G_muris.fasta
+    output: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_muris.stats
+    jobid: 1
+    reason: Missing output files: output/tRNAscan/G_muris.tRNA
+    wildcards: genome=G_muris
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+Activating conda environment: .snakemake/conda/25ffc8cb9d69ced7a0049fc62302f1e6_
+[Thu Jan 11 20:58:44 2024]
+Finished job 1.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jan 11 20:58:44 2024]
+localrule tRNAscan_stats_wildcard:
+    input: resource/Genome/G_intestinalis.fasta
+    output: output/tRNAscan/G_intestinalis.tRNA, output/tRNAscan/G_intestinalis.stats
+    jobid: 2
+    reason: Missing output files: output/tRNAscan/G_intestinalis.tRNA
+    wildcards: genome=G_intestinalis
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+Activating conda environment: .snakemake/conda/25ffc8cb9d69ced7a0049fc62302f1e6_
+[Thu Jan 11 20:59:02 2024]
+Finished job 2.
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jan 11 20:59:02 2024]
+localrule all:
+    input: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_intestinalis.tRNA
+    jobid: 0
+    reason: Input files updated by another job: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_intestinalis.tRNA
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+[Thu Jan 11 20:59:02 2024]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2024-01-11T205656.124843.snakemake.log

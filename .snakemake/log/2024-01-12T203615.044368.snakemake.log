@@ -1,0 +1,13 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+tRNAscan_stats_wildcard        2
+total                          3
+
+Select jobs to execute...

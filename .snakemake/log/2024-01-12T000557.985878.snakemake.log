@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+tRNAscan_stats_wildcard        2
+total                          3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jan 12 00:05:58 2024]
+localrule tRNAscan_stats_wildcard:
+    input: resource/Genome/G_muris.fasta
+    output: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_muris.stats
+    jobid: 1
+    reason: Missing output files: output/tRNAscan/G_muris.tRNA
+    wildcards: genome=G_muris
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+RuleException:
+CalledProcessError in file /Users/melisanuralparslan/PycharmProjects/Miuul/Snakefile, line 40:
+Command 'set -euo pipefail;  /Users/melisanuralparslan/anaconda3/envs/blast/bin/python3.12 /Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/scripts/tmpfpvtnzqa.tRNAscan_stats.py' returned non-zero exit status 1.
+[Fri Jan 12 00:05:58 2024]
+Error in rule tRNAscan_stats_wildcard:
+    jobid: 1
+    input: resource/Genome/G_muris.fasta
+    output: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_muris.stats
+    conda-env: /Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/25ffc8cb9d69ced7a0049fc62302f1e6_
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-12T000557.985878.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

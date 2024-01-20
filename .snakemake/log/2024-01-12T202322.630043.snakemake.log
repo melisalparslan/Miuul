@@ -1,0 +1,56 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+all                            1
+tRNAscan_stats_wildcard        2
+total                          3
+
+Select jobs to execute...
+
+[Fri Jan 12 20:23:28 2024]
+rule tRNAscan_stats_wildcard:
+    input: resource/Genome/G_intestinalis.fasta
+    output: output/tRNAscan/G_intestinalis.tRNA, output/tRNAscan/G_intestinalis.stats
+    jobid: 2
+    reason: Missing output files: output/tRNAscan/G_intestinalis.tRNA; Code has changed since last execution
+    wildcards: genome=G_intestinalis
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+/Users/melisanuralparslan/anaconda3/envs/Miuul/bin/python3.8 /Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/scripts/tmpnduokggo.tRNAscan_stats.py
+Activating conda environment: .snakemake/conda/25ffc8cb9d69ced7a0049fc62302f1e6_
+[Fri Jan 12 20:23:46 2024]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Fri Jan 12 20:23:46 2024]
+rule tRNAscan_stats_wildcard:
+    input: resource/Genome/G_muris.fasta
+    output: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_muris.stats
+    jobid: 1
+    reason: Missing output files: output/tRNAscan/G_muris.tRNA; Code has changed since last execution
+    wildcards: genome=G_muris
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+/Users/melisanuralparslan/anaconda3/envs/Miuul/bin/python3.8 /Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/scripts/tmpgu8p36wk.tRNAscan_stats.py
+Activating conda environment: .snakemake/conda/25ffc8cb9d69ced7a0049fc62302f1e6_
+[Fri Jan 12 20:25:33 2024]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Fri Jan 12 20:25:33 2024]
+localrule all:
+    input: output/tRNAscan/G_muris.tRNA, output/tRNAscan/G_intestinalis.tRNA
+    jobid: 0
+    reason: Input files updated by another job: output/tRNAscan/G_intestinalis.tRNA, output/tRNAscan/G_muris.tRNA
+    resources: tmpdir=/var/folders/zd/q6hs8wp95bzghfwd0ynkkpc00000gn/T
+
+[Fri Jan 12 20:25:33 2024]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2024-01-12T202322.630043.snakemake.log
