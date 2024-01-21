@@ -75,12 +75,12 @@ rule blastn:
 
 rule orthofinder:
     input:
-        fasta = "resource/orthofinde",
+        fasta = "/Users/melisanuralparslan/PycharmProjects/Miuul/resource/orthofinder/",
     output:
-        directory('output/ortofinder/')
+        directory('output/orthofinder/')
     conda:
         "env/env.yaml"
     script:
-        "scripts/2_BioinformaticsTools/orthofinder.py"
+        "scripts/orthofinder.py"
 
 

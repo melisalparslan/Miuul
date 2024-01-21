@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Creating conda environment env/env.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /Users/melisanuralparslan/PycharmProjects/Miuul/env/env.yaml:
+Command:
+conda env create --quiet --file "/Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/74b149ebcd4fa2be1f02ff422474f4b4_.yaml" --prefix "/Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/74b149ebcd4fa2be1f02ff422474f4b4_"
+Output:
+Channels:
+ - bioconda
+ - conda-forge
+ - nanoporetech
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+Channels:
+ - bioconda
+ - conda-forge
+ - nanoporetech
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+
+LibMambaUnsatisfiableError: Encountered problems while solving:
+  - nothing provides requested blast
+  - nothing provides blast needed by orthofinder-2.3.10-0
+
+Could not solve for environment specs
+The following packages are incompatible
+├─ blast does not exist (perhaps a typo or a missing channel);
+└─ orthofinder is not installable because it requires
+   └─ blast, which does not exist (perhaps a missing channel).
+
+
