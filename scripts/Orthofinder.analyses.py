@@ -1,7 +1,7 @@
 import pandas as pd
 from matplotlib import pyplot as plt
 from upsetplot import UpSet
-#import seaborn as sns
+import seaborn as sns
 
 #PATH
 path_OG_count = "/Users/melisanuralparslan/PycharmProjects/Miuul/resource/orthofinder/Orthofinder/Results_Jan18/Orthogroups/Orthogroups.GeneCount.tsv"
@@ -28,8 +28,8 @@ df_count_s.loc[df_count_s["Total"] > 1, "Type"] = "OG"
 df_count_s.loc[df_count_s["Total"] == 1, "Type"] = "singleton"
 
 df_count_s = df_count_s.rename(columns={"S_salmonicida_aa": "S. salmonicida",
-                                        "G_intestinalis_aa": "G. intestinalis"
-                                        "G_muris_aa" "G. muris"})
+                                        "G_intestinalis_aa": "G. intestinalis",
+                                        "G_muris_aa": "G. muris"})
 
 #Upset data
 "Upset plot for both OG and singletons marked different colors"
