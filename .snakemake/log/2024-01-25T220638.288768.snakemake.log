@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Creating conda environment env/env.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /Users/melisanuralparslan/PycharmProjects/Miuul/env/env.yaml:
+Command:
+conda env create --quiet --file "/Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/8c4a039e902ad0abb1f1d6be87813a9e_.yaml" --prefix "/Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/8c4a039e902ad0abb1f1d6be87813a9e_"
+Output:
+Channels:
+ - bioconda
+ - conda-forge
+ - nanoporetech
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): ...working... failed
+
+CondaHTTPError: HTTP 000 CONNECTION FAILED for url <https://conda.anaconda.org/conda-forge/noarch/repodata.json>
+Elapsed: -
+
+An HTTP error occurred when trying to retrieve this URL.
+HTTP errors are often intermittent, and a simple retry will get you on your way.
+'https//conda.anaconda.org/conda-forge/noarch'
+
+
+
