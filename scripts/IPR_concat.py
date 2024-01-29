@@ -1,7 +1,7 @@
 import pandas as pd
 import glob
 
-path = "/Users/melisanuralparslan/PycharmProjects/Miuul/resource/interproscan/G_muris.tsv"
+path = "/Users/melisanuralparslan/PycharmProjects/Miuul/resource/interproscan/*.tsv"
 out_file = "/Users/melisanuralparslan/PycharmProjects/Miuul/data/ipr_concat.csv"
 list_files = glob.glob(path)
 
@@ -27,3 +27,4 @@ for key, value in sp_dic.items():
 #concat all the species
 concat = pd.concat(dic_ann, axis=0).dropna().drop_duplicates()
 concat.to_csv(out_file, sep="\t", index=False)
+
