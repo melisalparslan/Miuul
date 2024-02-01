@@ -1,0 +1,39 @@
+Building DAG of jobs...
+Creating conda environment env/env.yaml...
+Downloading and installing remote packages.
+CreateCondaEnvironmentException:
+Could not create conda environment from /Users/melisanuralparslan/PycharmProjects/Miuul/env/env.yaml:
+Command:
+conda env create --quiet --file "/Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/c0b74a8da3f732a95c3282029a76aa4a_.yaml" --prefix "/Users/melisanuralparslan/PycharmProjects/Miuul/.snakemake/conda/c0b74a8da3f732a95c3282029a76aa4a_"
+Output:
+Channels:
+ - bioconda
+ - conda-forge
+ - nanoporetech
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - bioconda::orthofinder
+
+Current channels:
+
+  - https://conda.anaconda.org/bioconda/osx-arm64
+  - https://conda.anaconda.org/conda-forge/osx-arm64
+  - https://conda.anaconda.org/nanoporetech/osx-arm64
+  - https://repo.anaconda.com/pkgs/main/osx-arm64
+  - https://repo.anaconda.com/pkgs/r/osx-arm64
+  - https://conda.anaconda.org/bioconda
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+
