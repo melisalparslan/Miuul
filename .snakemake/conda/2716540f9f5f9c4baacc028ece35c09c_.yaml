@@ -6,5 +6,5 @@ channels:
 dependencies:
   - trnascan-se
   #- bioconda::blast
-  - bioconda::orthofinder=2.2.7
+  - bioconda::orthofinder = 2.2.7
 
